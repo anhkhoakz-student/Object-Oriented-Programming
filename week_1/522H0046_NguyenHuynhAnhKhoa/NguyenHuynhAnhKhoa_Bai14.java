@@ -22,9 +22,9 @@ public class NguyenHuynhAnhKhoa_Bai14 {
         return itemChoice;
     }
 
-    public static void xuLyThanhToan(int itemPrice) {
+    public static void xuLyThanhToan(int itemPrice, String productName) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("The price of this item is " + itemPrice + "$, please enter the amount of money:");
+        System.out.println("The price of " + productName + " is " + itemPrice + "$, please enter the amount of money:");
         int money = sc.nextInt();
         if (money < itemPrice) {
             System.out.println("Not enough money to buy this item. Please enter again");
@@ -42,16 +42,16 @@ public class NguyenHuynhAnhKhoa_Bai14 {
 
             switch (itemChoice) {
                 case 1:
-                    xuLyThanhToan(2);
+                    xuLyThanhToan(2, "Coca");
                     break;
                 case 2:
-                    xuLyThanhToan(1);
+                    xuLyThanhToan(1, "Pepsi");
                     break;
                 case 3:
-                    xuLyThanhToan(3);
+                    xuLyThanhToan(3, "Sprite");
                     break;
                 case 4:
-                    xuLyThanhToan(4);
+                    xuLyThanhToan(4, "Snack");
                     break;
                 default:
                     System.out.println("Machine is shutting down...");
